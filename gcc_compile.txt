@@ -1,0 +1,1 @@
+g++ -Wall -Wextra main.cpp tokens.cpp lexer.cpp nodes.cpp parser.cpp values.cpp interpreter.cpp -o main
