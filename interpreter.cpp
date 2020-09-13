@@ -42,7 +42,12 @@ namespace Interpreter {
     }
 
     Values::Number Interpreter::visit_divide_node(Nodes::Node *node) {
-        return Values::Number(visit(node->node_a).value / visit(node->node_b).value);
+        double value = visit(node->node_b).value;
+
+        if (value == 0.0)
+            throw std::string("Zero division error");
+
+        return Values::Number(visit(node->node_a).value / value);
     }
 
     Values::Number Interpreter::visit_power_node(Nodes::Node *node) {
