@@ -13,4 +13,4 @@ Here is CoolDeveloper101's [simple math interpreter](https://github.com/CoolDeve
 
 # Running the program
 
-If you are using G++ (GNU Compiler Collection), there is a [gcc_compile.txt](https://github.com/jackprogramsjp/CPP-Simple-Math-Interpreter/blob/master/gcc_compile.txt), so you can compile the interpreter into exe file.
+If you are using G++ (GNU Compiler Collection), there is a [g++_compile.txt](https://github.com/jackprogramsjp/CPP-Simple-Math-Interpreter/blob/master/g++_compile.txt), so you can compile the interpreter into exe file.
