@@ -6,7 +6,7 @@
 #include <cstddef>
 
 #define WHITESPACE " \n\t"
-#define DIGITS "012345678"
+#define DIGITS "0123456789"
 
 namespace Lexer {
     class Lexer {
