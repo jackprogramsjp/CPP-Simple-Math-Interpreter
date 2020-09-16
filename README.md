@@ -4,6 +4,8 @@ I made this for fun, so there may or may not be some bad practice or anything li
 
 An interpreter, written in C++, that can evaluate simple math calculations.
 
+**I won't be working on this anymore. I didn't think beforehand on how I should make this, and I barely have any knowledge on C++.**
+
 ## Credits
 
 Credits to [CodePulse](https://www.youtube.com/channel/UCUVahoidFA7F3Asfvamrm7w) for the Simple Math interpreter written in Python and credits to [CoolDeveloper101](https://github.com/CoolDeveloper101) for his Simple Math Interpreter written in C#.
