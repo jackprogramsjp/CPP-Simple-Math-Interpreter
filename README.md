@@ -1,4 +1,4 @@
-# C++ - Simple Math Interpreter
+# C++ - Simple Math Interpreter [Deprecated]
 
 I made this for fun, so there may or may not be some bad practice or anything like that! If there is an issue, I'm willing to fix it, but I do not have a lot of knowledge with C++.
 
