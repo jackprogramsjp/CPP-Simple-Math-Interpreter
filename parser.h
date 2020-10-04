@@ -7,13 +7,17 @@
 #include "tokens.h"
 #include "nodes.h"
 
+#define PARSER_EMPTY_NODE node = new Nodes::Node(Nodes::EmptyNode)
+
 namespace Parser {
     class Parser {
         public:
             std::vector<Tokens::Token> tokens;
-            int index;
+            std::size_t index;
+            Nodes::Node *node;
 
             Parser(std::vector<Tokens::Token>);
+            ~Parser();
             void advance();
             Tokens::Token current();
             Nodes::Node *parse();

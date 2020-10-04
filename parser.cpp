@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <iostream>
 
 #include "parser.h"
 #include "tokens.h"
@@ -12,6 +13,10 @@ namespace Parser {
         index = 0;
     }
 
+    Parser::~Parser() {
+        Nodes::free_node(node);
+    }
+
     void Parser::advance() {
         index++;
     }
@@ -21,15 +26,19 @@ namespace Parser {
     }
 
     Nodes::Node *Parser::parse() {
-        if (current().type == Tokens::EOF_)
-            return new Nodes::Node(Nodes::EmptyNode);
+        if (current().type == Tokens::EOF_) {
+            PARSER_EMPTY_NODE;
+            return node;
+        }
         
-        Nodes::Node *result = expr();
-        
-        if (current().type != Tokens::EOF_)
+        node = expr();
+
+        if (current().type != Tokens::EOF_) {
+            PARSER_EMPTY_NODE;
             throw std::string("Invalid syntax");
-        
-        return result;
+        }
+                        
+        return node;
     }
 
     Nodes::Node *Parser::expr() {
@@ -85,6 +94,7 @@ namespace Parser {
             Nodes::Node *result = expr();
 
             if (current().type != Tokens::RPAREN) {
+                PARSER_EMPTY_NODE;
                 throw std::string("Syntax error");
             }
 
@@ -101,6 +111,7 @@ namespace Parser {
             return new Nodes::Node(Nodes::MinusNode, factor());
         }
 
+        PARSER_EMPTY_NODE;
         throw std::string("Syntax error");
     }
 }

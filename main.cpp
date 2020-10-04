@@ -28,8 +28,6 @@ int main() {
                 Values::Number result = interpreter.visit(tree);
                 Values::print_number(result);
             }
-            Nodes::free_node(tree);
-            tree = nullptr;
         } catch (std::string e) {
             std::cerr << e << '\n';
         }
