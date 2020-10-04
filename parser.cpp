@@ -112,6 +112,7 @@ namespace Parser {
         }
 
         PARSER_EMPTY_NODE;
+        
         throw std::string("Syntax error");
     }
 }

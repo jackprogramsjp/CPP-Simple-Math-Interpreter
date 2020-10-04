@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>
 
 #include "nodes.h"
 
@@ -59,6 +58,6 @@ namespace Nodes {
             node->node_b = nullptr;
         }
 
-        std::free(node);
+        delete node;
     }
 }

@@ -15,8 +15,15 @@ int main() {
 
     while (true) {
         try {
-            std::cout << "calc > ";
+            std::cout << "calc > " << std::flush;
             std::getline(std::cin, text);
+            if (std::cin.bad()) {
+                std::cerr << "IO error\n";
+                break;
+            } else if (std::cin.eof()) {
+                std::cerr << "End of file\n";
+                break;
+            }
             Lexer::Lexer lexer(text);
             tokens = lexer.get_tokens();
             //Lexer::print_tokens(tokens);
