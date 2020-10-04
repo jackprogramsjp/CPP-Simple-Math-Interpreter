@@ -1,10 +1,8 @@
-# C++ - Simple Math Interpreter [Deprecated]
+# C++ - Simple Math Interpreter
 
 I made this for fun, so there may or may not be some bad practice or anything like that! If there is an issue, I'm willing to fix it, but I do not have a lot of knowledge with C++.
 
 An interpreter, written in C++, that can evaluate simple math calculations.
-
-**I won't be working on this anymore. I didn't think beforehand on how I should make this, and I barely have any knowledge on C++.**
 
 ## Credits
 
